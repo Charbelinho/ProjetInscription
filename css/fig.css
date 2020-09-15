@@ -1,0 +1,672 @@
+@font-face{
+	font-family: "enriqueta";
+	src:url(../polices/enriqueta/Enriqueta-Regular.otf);
+}
+@font-face{
+	font-family: "OpenSans";
+	src:url(../polices/open-sans/OpenSans-Semibold.ttf);
+}
+@font-face{
+	font-family: "source-sans-pro";
+	src:url(../polices/source-sans-pro/SourceSansPro-BoldIt.otf);
+}
+@font-face{
+	font-family: "graduate";
+	src:url("../polices/graduate/graduate-regular.ttf");
+}
+@font-face{
+	font-family: "source-sans-pro-R";
+	src:url(../polices/source-sans-pro/SourceSansPro-Regular.otf);
+}
+@font-face{
+	font-family: "myriad-pro-cufonfonts";
+	src:url(../polices/myriad-pro-cufonfonts/MYRIADPRO-BOLDCOND.OTF);
+}
+
+.wallpaper{
+	background: url("../img/graduates.jpg");
+	min-height: 100vh;
+	border:1px solid red;
+}
+.btnenter{
+	display: inline-block;
+	z-index: 2;
+	border: 2px solid red;
+	color: #ffbf0b;
+	font-size: 4.7rem;
+	width: 100px;
+	font-family: "myriad-pro-cufonfonts";
+
+}
+.wallpaper:before{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(5,41,77,0.8);
+}
+[class*="col-"], footer {
+  /*border: 2px solid black;*/
+
+  line-height: 40px;
+}
+
+/***************************
+entete de page
+***************************/
+header{
+	background-color: #05294d;
+}
+.part1{
+	background-color: #05294d;
+	z-index: 400;
+	/*margin-bottom: -10px;*/
+	/*height: 100px;*/
+	margin-top: -10px;
+	vertical-align: bottom;
+	font-family: "enriqueta";
+}
+.part1 a{
+	line-height: 2em;
+	text-align: center;
+}
+.part1 a span{
+	margin-top: 50px;
+	display: inline-block;
+	color: #ffbf0b;
+	transform-style: preserve-3d;
+	border-radius: 100px;
+	font-size: 1.5em;
+}
+.connexion,.inscription{
+	transition: background-color,color,border;
+	transition-duration: 1s;
+}
+.connexion:hover,.inscription:hover{
+	background-color: #ffbf0b;
+	color: white;
+}
+.part2{
+	/*margin-top: 40px;*/
+	background-color: #06294d;
+	/*height: 60px;*/
+	height: 50px;
+
+
+}
+.responnav{
+	width: 300px;
+}
+nav{
+	font-family: "enriqueta";	
+	margin-top: 20px;	
+}
+nav a{
+	perspective: 800px;
+	line-height: 2em;
+	/*border:1px solid red;*/
+	text-align: center;
+
+
+}
+nav a span{
+		position: relative;
+		display: inline-block;
+		border:1px solid #06366e;
+		color: #ffc600;
+		transform-style: preserve-3d;
+		border-radius: 100px;
+		font-size: 1.5em;
+}
+nav a span:before{
+	/*visibility: hidden;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 100px;
+	border:4px solid #06366e;
+	content: attr(data-hover);
+	width: 100%;
+	height: 100%;
+	color :#06294d;
+	font-weight: bold;
+	background-color: #ffc600;
+	transform-origin: 0 0;
+	/*transform: translateY(50px);*/
+	transform: rotateY(0deg);
+	transition: transform;
+	transition-duration: 0.5s;
+}
+nav a:hover span{
+	/*background-color: #1e1e8b;*/
+	color: white;
+
+}
+nav a:hover span:before{
+	transform: rotateZ(-20deg);
+	visibility: visible;
+	color: white;
+}
+
+.bar{
+	/*background-color: #0a63c9;*/
+	width: 100px;
+	height: inherit;
+	transition: width,height,transform;
+	transition-duration: 1s;
+}
+.bar:focus{
+	width: 50px;
+	height: inherit;
+	transform: rotate(90deg);
+	color: blue;
+}
+/********************************
+corp de page
+********************************/
+.banniere_body{
+	height: 455px;
+	background: url("../img/etudiant_ss_frise1.jpg");
+	background-size: 100% 100%;
+}
+.infocadre{
+	height: 300px;
+	background-color: rgba(255,255,255,0.5);
+}
+.infocadre1{
+	position: relative;
+	top: 50px;
+}
+.infocadre p:nth-child(2){
+	font-family: "OpenSans";
+}
+.blocinfo{
+	height: inherit;
+	margin-left: -20px;
+}
+.title_info{
+	font-size: 3em;
+	font-weight: bold;
+	color: #05294d;
+	font-family: "graduate"; 
+}
+@media screen and (max-width: 740px) {
+	.title_info{
+		font-size: 30px;
+	}
+	.banniere_body{
+	height: 420px;
+	}
+	
+}
+@media screen and (max-width: 540px) {
+	.title_info{
+		font-size: 20px;
+	}
+	.banniere_body{
+	height: 350px;
+	}
+}
+.picture_student{
+	margin-top: 40px;
+	height: 317px;
+	
+	
+	/*width: 564px;*/
+}
+.picture_student1{
+	background: url(../img/begin.jpg);
+	background-size: 100% 100%;
+	height:inherit;
+}
+@media screen and (max-width: 1150px) {
+	.picture_student{
+		height: 250px;
+	}
+}
+@media  screen and (max-width: 844px) {
+	.picture_student{
+		height: 280px;
+	}
+}
+@media  screen and (max-width: 650px) {
+	.picture_student{
+		height: 300px;
+	}
+}
+/*@media  screen and (max-width: 910px) {
+	.picture_student{
+		height: 200px;
+	}
+}
+*/.newyear{
+
+	color: white;
+	height: 400px;
+
+}
+.ban2school{
+	position: relative;
+	top: 0;
+	margin: 40px;
+	padding: 0px;
+
+}
+.blocdiplome{
+	font-family: "source-sans-pro-R";
+	background-color: #05294d;
+}
+.newyear h2{
+	color: #ffc600;
+	font-weight: bold;
+
+}
+
+.newyear p:nth-child(2){
+	text-align: justify;
+	font-size: 1.8rem;
+	font-family: "source-sans-pro";
+	/*font-style: italic;*/
+}
+.newyear p:nth-child(4){
+	font-size: 1.5rem;
+	text-align:justify;
+}
+.short1{
+display: inline-block;
+text-align: left;
+margin: -5px;
+background-color: #ffc600;
+border:1.3px solid #ffc600;	
+width: 50px;
+}
+.short2{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border:5px solid #ffc600 ;
+}
+@media screen and (max-width: ) {
+	
+}
+.picture_student,.newyea{
+
+}
+.info_cdn{
+	background:url(../img/Livre.jpg);
+	background-size: 100% 100%;
+	height: 200px;
+}
+.info_cdn:before{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	content: "";
+	width: 100%;
+	background-color: rgba(207,182,129,0.9);
+}
+.info_sallinfo{
+	background: url(../img/salles_informatique_1.jpg);
+	background-size: 100% 100%;
+	height: 200px;
+}
+.info_sallinfo:before{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	content: "";
+	width: 100%;
+	background-color: rgba(5,41,77,0.9);
+}
+.info_etudiant{
+	background: url(../img/etudiantpigier.jpg);
+	background-size: 100% 100%;
+	height: 200px;
+}
+.info_etudiant:before{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	content: "";
+	width: 100%;
+	background-color: rgba(255,198,0,0.9);
+}
+
+[class*="info_"]> div{
+	z-index: 2;
+	font-family: "source-sans-pro-R";
+	position: relative;
+	text-align: center;
+}
+.info_sall{
+	background: url(../img/large_salle.jpg);
+	background-size: 100% 100%;
+	height: 200px;
+}
+.info_sall:before{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	content: "";
+	width: 100%;
+	background-color: rgba(255,255,255,0.9);
+}
+.str1{
+	color: #05294d;
+}
+.str2{
+	color: white;
+}
+.str3{
+	color:#ffc600;
+}
+.info_autre{
+	background: url(../img/expertise_tenue.jpg);
+	background-size: cover;
+	height: 200px;
+}
+.info_autre:before{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	content: "";
+	width: 100%;
+	background-color: rgba(5,41,77,0.9);
+}
+.str{
+	font-family: "myriad-pro-cufonfonts";
+	font-size: 3.9rem;
+	font-weight: bold;
+}
+/******************
+le pied de page
+******************/
+.mapsing{
+	width: 100%;
+	height: 100%;
+}
+.footer{
+	font-family: "enriqueta";
+	background-color: #414141;
+	height: 500px;
+}
+.pt1{
+	height: 500px;
+	background-color: rgba(255,255,255,0.4);
+}
+.pt2{
+	height: 500px;
+	background-color: rgba(255,255,255,0.2);
+}
+.ecole{
+	margin-top: 0;
+	/*padding: 100px;*/
+	width: 100%;
+	background: url(../img/pigier.jpg);
+	background-size: cover;
+	height: 200px;
+}
+.ecole > a{
+	display: inline-block;
+	height: 200px;
+	width: 300px;
+	background: url(../img/pigier1.jpg);
+	background-size: cover;
+}
+.locate{
+	margin-top: 5px;
+	padding: 5px;
+	width: 100%;
+}
+.info:hover,.info1:hover,.info2:hover{
+	text-decoration:none;
+	color: white;
+}
+.netwrk{
+	background-color: #414141;
+}
+.titrefooter{
+	border:1px solid white;
+	text-align: center;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+}
+.face,.insta,.linked,.msg{
+	border-radius: 90px;
+	transition: transform;
+	transition-duration: 1s;
+}
+.face:hover,.insta:hover,.linked:hover,.msg:hover{
+	transform: scale(0.8);
+}
+.text_form1{
+	font-family: "enriqueta";
+	color: white;
+	
+
+	font-size: 2.5rem;
+}
+.text_form1 > a{
+	color: white;
+}
+.text_form1 > a:hover{
+	color: white;
+	text-decoration: none;
+}
+.short2{
+	display: inline-block;
+	text-align: left;
+	margin: -5px;
+	background-color: white;
+	border:1.3px solid white;	
+	width: 50px;
+}
+/**************************
+page de login du personel
+**************************/
+
+.bodylogin{
+	background: url("../img/hd_login.jpg");
+	font-family: "OpenSans";
+}
+.fond{
+	background-color: rgba(219,212,206,0.5);
+	height: 730px;
+}
+.formperso{
+	margin-top: 100px;
+
+}
+.userlog{
+	border-radius: 100px;
+	margin-left: 80px;
+}
+.connect,.annuler{
+	text-decoration: none;
+	text-align: center;
+	border:2px solid #0078d7;
+	border-radius: 15px; 
+}
+.connect{
+	border:2px solid #0078d7;
+	background-color: #0078d7;
+	color:white;
+	transition: background-color,border-color;
+	transition-duration: 0.9s;
+}
+.annuler{
+	display: inline-block;
+	line-height: 4em;
+	border:2px solid #ffffff;
+	background-color:  #ffffff;
+	transition: font-weight 1s;
+}
+.connect:hover{
+	text-decoration: none;
+	color:white;
+	background-color: #00396e;
+	border-color: #00396e;
+	
+}
+.annuler:hover{
+	text-decoration: none;
+	color: #0078d7;
+	font-weight: bold; 
+
+}
+.log{
+	background-color: rgba(255,255,255,0.5);
+}
+.iconnex{
+	margin-top: 20px;
+}
+
+/*************************
+formulaire d'inscription
+*************************/
+
+.forminscription{
+	font-family: "graduate";
+	text-align: center;
+	font-size: 3em;
+	background-color: #05294d;
+	color: white;
+	border-radius: 5px;
+}
+.etu{
+	color: #05294d;
+	transition:border;
+	transition-duration: 2s;
+}
+.titletu{
+	color: #05294d;
+	font-family: "graduate";
+}
+.etu:hover{
+	border-left:  8px solid #ffcd43;
+	border-top: #ffcd43;
+	border-bottom:#ffcd43;
+}
+.cycle{
+	color: #0078d7;
+	transition:border;
+	transition-duration: 2s;
+	transition-timing-function: ease;
+}
+.cycle:hover{
+	border-left:  8px solid #0078d7;
+	border-top: #0078d7;
+	border-bottom:#0078d7;
+}
+.titlec{
+	color: #0078d7;
+	font-family: "graduate";
+}
+.pay{
+	color: #a6e22a;
+	transition:border;
+	transition-duration: 2s;
+	transition-timing-function: ease;
+}
+.pay:hover{
+	border-left:  8px solid #a6e22a;
+	border-top: #a6e22a;
+	border-bottom:#a6e22a;
+}
+.title{
+	color: #a6e22a;
+	font-family: "graduate";
+}
+legend{
+	border-radius: 10px;
+	color: white;
+}
+.infostransfert{
+	border-radius: 10px;
+	width: 400px;
+	height: 200px;
+	background-color: lightblue;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.infostransfert p{
+	color: black;
+
+}
+.operateur{
+	border-radius: 20px;
+}
+.btvalider,.btreset{
+	font-family: "graduate";
+}
+
+/*id modif*/
+.idfig{
+	
+	color: #a6e22a;
+	font-family: "graduate";
+
+}
+.fotable{
+	border: 2px solid red;
+	
+}
+/*PAGE PROFILE ETDUANT*/
+.matable{
+	font-family: "OpenSans";
+}
+tr:nth-child(even) {
+	background: #05294d;
+	color: white;
+
+}
+.profil{
+	background-color: #ffbf0b;
+	height: 500px;
+}
+.photo_profil{
+	height: 200px;
+}
+.edit{
+	padding-top: 50px;
+	background-color: #05294d;
+	color: red;
+	height: 100px;
+}
+.nom_prenom{
+	font-family: "OpenSans";
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.5rem;
+	color: #05294d;
+
+}
+.text_profil{
+color: #ffbf0b;
+}
+.color_cont{
+	background-color: #ffbf0b;
+}
+.contact_form{
+	font-family: "OpenSans";
+
+	color: #05294d;
+}
+/*ID PERMANENT*/
+
+.idperm{
+	color: #05294d;
+}
